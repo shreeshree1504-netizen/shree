@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rathnalaya’s Academy of Indian Music and Arts Inc.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Hind:wght@400;500;600&subset=devanagari,latin&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF7EE;--surface:#fff;--text:#2A1A1D;--head:#5E1224;--soft:#7A2236;--cream:#F1E7D0;
+  --hero:#3A0A16;--on-hero:#FBF7EE;--gold:#B8923A;--gold-l:#DDC17E;--btn:#5E1224;--btn-fg:#FBF7EE;
+  --line:rgba(184,146,58,.55);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1C0A0F;--surface:#2A1219;--text:#F1E7D0;--head:#E3C987;--soft:#D9B5BD;--cream:#241016;
+  --hero:#2B0711;--btn:#DDC17E;--btn-fg:#3A0A16;}}
+:root[data-theme="dark"]{
+  --bg:#1C0A0F;--surface:#2A1219;--text:#F1E7D0;--head:#E3C987;--soft:#D9B5BD;--cream:#241016;
+  --hero:#2B0711;--btn:#DDC17E;--btn-fg:#3A0A16;}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Hind,system-ui,sans-serif;font-size:1.05rem;line-height:1.7}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;color:var(--head);line-height:1.12;margin:0}
+a{color:inherit}
+:where(a,button,input,select,textarea,summary):focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;padding:10px 20px;border-radius:2px;background:var(--btn);color:var(--btn-fg);font:500 1rem Hind,sans-serif;text-decoration:none;border:0;cursor:pointer}
+.btn.quiet{background:transparent;color:var(--head);border:1px solid var(--line)}
+.btn.gold{background:var(--gold-l);color:#3A0A16}
+.btn.ghost{background:transparent;color:var(--gold-l);border:1px solid var(--gold-l)}
+header{border-bottom:1px solid var(--gold);background:var(--bg);position:sticky;top:0;z-index:5}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px;max-width:1100px;margin:0 auto;flex-wrap:wrap}
+.brand{text-decoration:none;line-height:1.15}
+.brand b{display:block;font:600 1.6rem "Cormorant Garamond",serif;color:var(--head)}
+.brand span{font-size:.85rem;color:var(--soft)}
+nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+nav a{color:var(--head);text-decoration:none}
+nav a:hover{text-decoration:underline}
+.hero{background:radial-gradient(ellipse at 88% 0%,rgba(184,146,58,.30),transparent 55%),radial-gradient(ellipse at 0% 100%,rgba(122,34,54,.65),transparent 52%),var(--hero);color:var(--on-hero)}
+.hero .wrap{padding-top:72px;padding-bottom:64px}
+.hero h1{color:var(--on-hero);font-size:clamp(2.6rem,7vw,5.4rem);max-width:16ch;font-weight:600}
+.hero p.lead{max-width:34rem;font-size:1.15rem;color:#E9DCC0;margin:22px 0 28px}
+.swara{margin-top:52px;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:18px 0;text-align:center;color:var(--gold-l);font-size:clamp(1.9rem,6vw,3.6rem);letter-spacing:.22em;word-spacing:.1em;overflow-wrap:anywhere}
+section{padding:64px 0}
+section.alt{background:var(--cream)}
+h2{font-size:2.6rem;margin-bottom:14px}h2::after{content:"";display:block;width:56px;height:2px;background:var(--gold);margin-top:10px}
+.two{display:grid;gap:36px;grid-template-columns:1fr 1fr}
+.cards{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:26px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--gold);padding:26px;display:flex;flex-direction:column}
+.card h3{font-size:1.6rem}
+.card p{margin:8px 0}
+.price{font:600 1.6rem "Cormorant Garamond",serif;color:var(--head);margin-top:auto}
+.tag{font-size:.9rem;color:var(--soft)}
+ol.steps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+ol.steps li{border-top:2px solid var(--gold);padding-top:10px}
+ol.steps b{font:600 1.7rem "Cormorant Garamond",serif;color:var(--head)}
+.notice{border:1px solid var(--gold);background:var(--cream);padding:12px 16px;font-size:.95rem;margin:16px 0}
+form{display:grid;gap:14px;max-width:560px;margin-top:20px}
+label{font-size:.9rem;font-weight:500;color:var(--head);display:block;margin-bottom:4px}
+input,select,textarea{width:100%;font:inherit;padding:9px 12px;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:2px}
+.gal{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-top:22px;padding:0;list-style:none}
+.gal li{aspect-ratio:1;border:1px solid var(--line);background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:.9rem;color:var(--soft)}
+footer{background:#3A0A16;color:#F1E7D0}
+footer .wrap{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));padding-top:40px;padding-bottom:40px;font-size:.92rem}
+footer b{font:600 1.3rem "Cormorant Garamond",serif;color:#DDC17E}
+@media (max-width:720px){.two{grid-template-columns:1fr}nav{gap:14px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="brand" href="#top"><b>Rathnalaya’s</b><span>Academy of Indian Music and Arts</span></a>
+    <nav aria-label="Main">
+      <a href="#courses">Courses</a><a href="#admissions">Admissions</a><a href="#gallery">Gallery</a>
+      <a class="btn" href="#portal">Log in</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <h1>Indian classical music, taught with patience and rigour.</h1>
+    <p class="lead">Classes online and in person across Canada, with fees shown in Canadian dollars.</p>
+    <a class="btn gold" href="#courses">Browse courses</a>
+    <a class="btn ghost" href="#admissions" style="margin-left:8px">Ask about admission</a>
+    <div class="swara" role="img" aria-label="Sa Re Ga Ma Pa Dha Ni Sa"><span aria-hidden="true">सा रे ग म प ध नि सा</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap two">
+    <div><h2>Learn online</h2><p>Join live classes from home. The class link appears in your student portal once your payment is confirmed.</p></div>
+    <div><h2>Learn in person</h2><p>Attend classes at the academy. The address and schedule are published on each course page once confirmed.</p></div>
+  </div>
+</section>
+
+<section class="alt" id="courses">
+  <div class="wrap">
+    <h2>Courses</h2>
+    <p>Choose a course, then pick online or in-person classes. Prices are in Canadian dollars (CAD).</p>
+    <div class="cards">
+      <article class="card"><h3>[Placeholder] Vocal music course</h3><p>Summary to be supplied by the academy.</p><p class="tag">Online and in person</p><p class="price">Fee to be confirmed</p></article>
+      <article class="card"><h3>[Placeholder] Instrumental music course</h3><p>Summary to be supplied by the academy.</p><p class="tag">Online and in person</p><p class="price">Fee to be confirmed</p></article>
+      <article class="card"><h3>[Placeholder] Arts course</h3><p>Summary to be supplied by the academy.</p><p class="tag">Online and in person</p><p class="price">Fee to be confirmed</p></article>
+    </div>
+    <p class="notice">In-person address and schedule will be published once the academy confirms them.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How enrolment works</h2>
+    <ol class="steps">
+      <li><b>1</b><p>Send an admission enquiry or choose a course.</p></li>
+      <li><b>2</b><p>Create your student account.</p></li>
+      <li><b>3</b><p>Pay course fees securely online.</p></li>
+      <li><b>4</b><p>Open your course in the student portal.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="alt" id="admissions">
+  <div class="wrap">
+    <h2>Admission enquiry</h2>
+    <p>Tell us what you would like to learn. The academy will reply by email.</p>
+    <form id="enq">
+      <div><label for="n">Full name</label><input id="n" required></div>
+      <div><label for="e">Email</label><input id="e" type="email" required></div>
+      <div><label for="f">Preferred format</label><select id="f"><option>No preference</option><option>Online</option><option>In person</option></select></div>
+      <div><label for="m">Message</label><textarea id="m" rows="4"></textarea></div>
+      <div><button class="btn" type="submit">Send enquiry</button></div>
+      <p class="notice" id="ok" hidden role="status">Preview only: in the full site this enquiry is saved for the academy’s admissions team.</p>
+    </form>
+  </div>
+</section>
+
+<section id="portal">
+  <div class="wrap two">
+    <div>
+      <h2>Student portal</h2>
+      <p>After registering and paying, students see their courses, protected class links, payment history and receipts here.</p>
+      <p class="notice">Preview only: login and payments run in the full Next.js site with Supabase and Stripe.</p>
+    </div>
+    <div class="card"><h3>My courses</h3><p>You are not enrolled in a course yet.</p><h3 style="margin-top:14px">Payment history</h3><p>No payments yet.</p></div>
+  </div>
+</section>
+
+<section class="alt" id="gallery">
+  <div class="wrap">
+    <h2>Gallery</h2>
+    <p class="notice">Photographs and recordings will appear here once the academy supplies them.</p>
+    <ul class="gal"><li>Image placeholder</li><li>Image placeholder</li><li>Image placeholder</li><li>Image placeholder</li></ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Rathnalaya’s Academy of Indian Music and Arts Inc.</b><p>Canada</p></div>
+    <div><p>[ACADEMY ADDRESS — TO BE CONFIRMED]</p><p>[CONTACT EMAIL — TO BE CONFIRMED]</p><p>[CONTACT PHONE — TO BE CONFIRMED]</p></div>
+    <div><p>All fees are in Canadian dollars (CAD).</p><p>[GST/HST REGISTRATION NUMBER — TO BE CONFIRMED, IF REGISTERED]</p></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById("enq").addEventListener("submit",function(ev){ev.preventDefault();document.getElementById("ok").hidden=false;});
+</script>
+</body>
+</html>
